@@ -144,22 +144,6 @@ The script allows to open its config folder and the folder with the MyBible modu
 
 The UI strings of this script can be localized. The script reads its localization from a file `l10n/<lang>.properties` located in the configuration folder, where `<lang>` is a language code. If there is a .properties file with the same filename as the system locale language code, that file will be used. Any strings missing from the file will be displayed in English (the script itself contains UI strings for such fallback cases). Currently only `en.properties` (English) and `uk.properties` (Ukrainian) are available. To install new translations for the script, localization files must be manually copied to the `l10n` folder in the config folder.  
 
-# Building an executable to run without Python installation
-
-The script doesn't require to be built on GNU/Linux and macOS since these OSes have Python installed by default. On Windows with Python installed the script can run as is, without building.
-If you need to build a binary that will run without Python being installed on your system, it can be done with `pyinstaller`. Included you'll find the spec file. `pyinstaller` is not needed for the script to function,
-it's only purpose is to compile the script into a binary.
-1. Create a new venv: `python3.12 -m venv $HOME/pyinstaller-venv`
-1. Activate the venv: `source $HOME/pyinstaller-venv/Scripts/activate` or `cd $HOME; .\pyinstaller-venv\Scripts\activate`
-1. Install pyinstaller: `pip3 install pyinstaller`
-1. Go to `mybible-cli` source folder and build the binary: `cd src/mybible-cli; pyinstaller mybible-cly.spec`
-
-On Windows you may also use `buildWindows.cmd` that automates the process.
-
-A folder with the executable and its dependencies will be found under `dist` subfolder.
-
-
-
 # Building an executable to run without Python installed
 
 On GNU/Linux and macOS, the script doesn't need to be built because these OSes have Python installed by default. On Windows with Python installed, the script can be run as is without building a separate executable.
