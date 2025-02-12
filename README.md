@@ -119,7 +119,7 @@ The GUI output can also be formatted, either on the command line or by specifyin
 
 ## Bible book names and abbreviations
 
-Bible book names and abbreviations are looked up in a list provided within the script. On the first run, the list is saved as `mapping.json` in the configuration directory and can be used to create custom lookup lists. This file maps Bible book codes specific to the mybible.zone format to possible book names, both full and abbreviated.
+Bible book names and abbreviations are looked up in a list provided within the script. On the first run, the list is saved as `mapping.json` in the configuration directory and can be used to create custom lookup lists. This file maps Bible book codes specific to the MyBible format to possible book names, both full and abbreviated.
 
 If you want to use book names and abbreviations from the module itself, run the script with the `-A` argument. To use a non-default lookup list, use the `-a prefix` option. In this case, the script will try to use `prefix_mapping.json` in the config folder.
 `prefix` can be an arbitrary string, but there should be a file in the config folder with a filename that starts with this string and is immediately followed by `_mapping.json`, otherwise the default lookup file will be used.  
