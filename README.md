@@ -157,3 +157,20 @@ it's only purpose is to compile the script into a binary.
 On Windows you may also use `buildWindows.cmd` that automates the process.
 
 A folder with the executable and its dependencies will be found under `dist` subfolder.
+
+
+
+# Building an executable to run without Python installed
+
+On GNU/Linux and macOS, the script doesn't need to be built because these OSes have Python installed by default. On Windows with Python installed, the script can be run as is without building a separate executable.
+
+If you need to build a binary that will run without Python installed on your system, this can be done with `pyinstaller`. In this repository you'll find the a spec file that `pyinstaller` can use. `pyinstaller` is not required for the script to work,
+its only purpose is to compile the script into a binary.
+1. Create a new venv: `python3.12 -m venv $HOME/pyinstaller-venv`
+1. Activate the venv: `source $HOME/pyinstaller-venv/Scripts/activate` or `cd $HOME; .\pyinstaller-venv\Scripts\activate`
+1. Install `pyinstaller`: `pip3 install pyinstaller`.
+1. Go to the `mybible-cli` source directory and build the binary: `cd mybible-cli; pyinstaller mybible-cly.spec`.
+
+On Windows you can also use `buildWindows.cmd` (also included) which automates the process.
+
+A folder containing the executable and its dependencies can be found in the `dist` subfolder.
