@@ -10,7 +10,7 @@ The main goal of `mybible-cli.py` is just to get the required text, not to perfo
 Here's one way to do it:
 
 ```  bash
-git clone https://github.com/kosivantsov/mybible-cli.git
+git clone https://github.com/kosivantsov/mybible-cli-python.git
 cd mybible-cli
 chmod +x mybible-cli
 ln -s $(pwd)/mybible-cli.py $HOME/bin/mybible-cli
@@ -18,7 +18,7 @@ ln -s $(pwd)/mybible-cli.py $HOME/bin/mybible-cli
 
 This way, you could run it by simply executing `mybible-cli`. The script would automatically update when you pull changes in your local git copy.
 
-If you're using MS Windows and don't have Python installed, it's still possible to use the script. [Download]((https://github.com/kosivantsov/mybible-cli/releases/latest/) the Windows build (look for a file called `mybible-cli.zip`), unzip it somewhere, and run `mybible-cli.exe` in the unzipped folder. When the zip is unzipped, you'll find `mybible-cli.exe` and a subfolder called `_internal`. Both are needed to run the program.
+If you're using MS Windows and don't have Python installed, it's still possible to use the script. [Download]((https://github.com/kosivantsov/mybible-cli-python/releases/latest/) the Windows build (look for a file called `mybible-cli.zip`), unzip it somewhere, and run `mybible-cli.exe` in the unzipped folder. When the zip is unzipped, you'll find `mybible-cli.exe` and a subfolder called `_internal`. Both are needed to run the program.
 
 For the program to be useful (either as a script or as a Windows executable), you must have at least one MyBible module.
 
